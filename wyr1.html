@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Znaczniki HTML</title>
+</head>
+
+<body>
+    <form>
+        <label for="znacznik">Podaj znacznik html:</label>
+		<br>
+        <input type="text" id="znacznik">
+        <button type="submit" id="submit">Sprawdź</button>
+    </form>
+	
+    <script>
+        document.getElementById('submit').addEventListener('click', () => 
+		{
+            const znacznik = document.getElementById('znacznik').value;
+            if(znacznik.match(/<.+?>/))
+			{
+                alert(znacznik + 'to znacznik html');
+            } 
+			else 
+			{
+                alert(znacznik + ' to nie jest znacznik html');
+            }
+        })
+    </script>
+</body>
+
+</html>
