@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Liczba całkowita ze znakiem</title>
+</head>
+
+<body>
+    <form>
+        <label for="znak">Podaj liczbę całkowitą ze znakiem:</label>
+		<br>
+        <input type="text" id="znak">
+        <button type="submit" id="submit">Sprawdź</button>
+    </form>
+	
+    <script>
+        document.getElementById('submit').addEventListener('click', () => 
+		{
+            const znak = document.getElementById('znak').value;
+            if(znak.match(/[-+]{1}[0-9]+/))
+			{
+                alert(znak + 'to poprawna liczba całkowita ze znakiem');
+            } 
+			else 
+			{
+                alert(znak + ' to nie poprawna liczba całkowita ze znakiem');
+            }
+        })
+    </script>
+</body>
+
+</html>
