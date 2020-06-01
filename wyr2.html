@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sprawdzanie linka</title>
+</head>
+
+<body>
+    <form>
+        <label for="link">Podaj link:</label>
+		<br>
+        <input type="text" id="link">
+        <button type="submit" id="submit">Sprawdź</button>
+    </form>
+	
+    <script>
+        document.getElementById('submit').addEventListener('click', () => 
+		{
+            const link = document.getElementById('link').value;
+            if(link.match(/^<a href=".+">$/))
+			{
+                alert(link + 'to poprawny link');
+            } 
+			else 
+			{
+                alert(link + ' to nie poprawny link');
+            }
+        })
+    </script>
+</body>
+
+</html>
